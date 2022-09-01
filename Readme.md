@@ -1,12 +1,13 @@
 # Диспетчерский пульт охраны банка "Dvmn"
-Сайт позволяет производить мониторинг посещения хранилища cотрудниками банка
+Диспетчерский пульт позволяет производить мониторинг посещения хранилища cотрудниками банка, подключаясь к удалённой базе данных с визитами и карточками пропуска сотрудников нашего банка. 
+Если вы попали в этот репозиторий случайно, то вы не сможете его запустить, т.к. у вас нет доступа к БД, но можете свободно использоваться код вёрстки или посмотреть как реализовать запросы к БД.
 
 ## Установка и запуск
 
 Python3 должен быть уже установлен. 
 1. Клонируйте репозиторий
 ```
-git clone https://github.com/rudenko-ks/watching_storage.git
+git clone https://github.com/rudenko-ks/django_orm_django_installation.git
 ```
 2. Создайте виртуальное окружение
 ```
@@ -17,9 +18,24 @@ source .venv/bin/activate
 ```
 pip install -r requirements.txt
 ```
-4. Запустите сервер командой
+4. Создайте файл `.env` с переменными окружения. Пример:
 ```
-python main.py
+- HOST=hostname.com
+- PORT=1234
+- NAME=entryname
+- USER=user
+- PASSWORD=password
+- SECRET_KEY=your_secret_key
+- DEBUG=True
+- ALLOWED_HOSTS=*
+- USE_L10N=True
+- LANGUAGE_CODE=ru-ru
+- TIME_ZONE=Europe/Moscow
+- USE_TZ=True
+```
+5. Запустите сервер командой
+```
+python manage.py runserver 0.0.0.0:8000
 ```
 ## Использование
 
