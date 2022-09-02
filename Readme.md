@@ -20,14 +20,10 @@ pip install -r requirements.txt
 ```
 4. Создайте файл `.env` с переменными окружения. Пример:
 ```
-- HOST=hostname.com
-- PORT=1234
-- NAME=entryname
-- USER=user
-- PASSWORD=password
+- DATABASE_URL=postgres://USER:PASSWORD@HOST:PORT/NAME
 - SECRET_KEY=your_secret_key
-- DEBUG=True
-- ALLOWED_HOSTS=*
+- DEBUG=False
+- ALLOWED_HOSTS=localhost
 - USE_L10N=True
 - LANGUAGE_CODE=ru-ru
 - TIME_ZONE=Europe/Moscow
