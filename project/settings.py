@@ -1,3 +1,4 @@
+from email.policy import default
 import os
 import dj_database_url
 from environs import Env
@@ -11,7 +12,7 @@ INSTALLED_APPS = ['datacenter']
 
 SECRET_KEY = env("SECRET_KEY")
 
-DEBUG = env.bool("DEBUG", True)
+DEBUG = env.bool("DEBUG", default=False)
 
 ROOT_URLCONF = 'project.urls'
 
